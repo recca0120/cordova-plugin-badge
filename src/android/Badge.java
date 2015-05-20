@@ -63,6 +63,8 @@ public class Badge extends CordovaPlugin {
      */
     static final String EXTRA_AUTO_CANCEL = "EXTRA_AUTO_CANCEL";
 
+    public static final String TAG = "Badge";
+
     /**
      * Executes the request.
      *

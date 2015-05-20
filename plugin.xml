@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="de.appplant.cordova.plugin.badge"
+        id="cordova-plugin-badge"
         version="0.6.4">
 
     <name>Badge</name>
@@ -70,7 +70,8 @@
 
     <!-- android -->
     <platform name="android">
-
+        <dependency id="cordova-plugin-shortcug-badger" url="https://github.com/recca0120/cordova-plugin-shortcug-badger.git" />
+        
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Badge">
                 <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge"/>

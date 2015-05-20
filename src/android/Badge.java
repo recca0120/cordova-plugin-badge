@@ -43,6 +43,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 
+import me.leolin.shortcutbadger.*;
 
 public class Badge extends CordovaPlugin {
 
@@ -218,6 +219,11 @@ public class Badge extends CordovaPlugin {
 
         editor.putInt(KEY, badge);
         editor.apply();
+        try {
+            ShortcutBadger.setBadge(cordova.getActivity().getApplicationContext(), badge);
+        } catch (ShortcutBadgeException e) {
+            Log.e(TAG, "showBadge failed: " + e.getMessage());
+        }
     }
 
     /**
